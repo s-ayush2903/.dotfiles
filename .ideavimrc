@@ -1,0 +1,15 @@
+set rnu
+set nu rnu
+set incsearch
+set noerrorbells
+set smartindent
+set NERDTree
+
+let mapleader = " "
+
+nnoremap <leader>w :NERDTree<CR>
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim' 
+Plugin 'preservim/nerdtree' 
+call vundle#end()

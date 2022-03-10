@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+confirmation() { 
+   echo " * You're about to add a bunch of changes to the current commit
+   (and not going to create a new one)
+ * Undoing it will be a real pain in the ass, no turning back!"
+   read -r -p " * Soooo, are you sure nigga? [y/n]: " response
+    case $response in
+        ([yY][eE][mM][sS] | [yY] | [yY][eE][sS])
+            return 0
+            ;;
+        *)
+            echo "Aborted!"
+            return 69
+            ;;
+    esac
+
+}

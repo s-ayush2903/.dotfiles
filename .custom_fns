@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+###!/bin/bash
+
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+NOCOLOR="\033[0m"
+#   {0} -> exit status for successful jobs / cmds
+# [1-255] -> exit status for failed jobs / cmds
+
+fcfn() {
+    echo hi
+}
+
+newfn() {
+    echo yo bro
+}
+
+pakka() {
+    echo are \'ya sure nigga? [y/n]
+}
+
+################!/usr/bin/env bash
+confirmation() {
+    read -r -p "Are you sure nigga? [y/n]: " response
+    case $response in
+        ([yY][eE][mM][sS] | [yY] | [yY][eE][sS] | [yY][oO])
+            return 0
+        echo 'accha bc sure hai?'
+        ;;
+    *)
+        echo 'Aborted!'
+        return 69
+        ;;
+    esac
+}
+
+
+conf() {
+    read -r -p "Are you sure bro? [y/n]: " response
+    case $response in
+        ([yY][eE][mM][sS] | [yY] | [yY][eE][sS] | [yY][oO])
+            return 0
+        echo 'accha bc sure hai?'
+        ;;
+    *)
+        echo 'Aborted!'
+        return 69
+        ;;
+    esac
+}
+
+customizedListAndGrep() {
+    # if [[ $1 ]]; then currDir=$currDir/; fi
+    if [[ $2 ]];
+    then
+        currDir=`realpath ${PWD/$1}`
+        pattern=$2
+    else
+        currDir=`realpath ${PWD}`
+        pattern=$1
+    fi;
+    # currDir=$(if [[ $2 ]]; then echo `pwd`/$1; else echo `pwd`; fi)
+    # pattern=$(if [[ $2 ]]; then echo "$2"; else echo "$1"; fi)
+    # echo dir to search: $currDir
+    # echo pattern to look for: $pattern
+    # if [[ $2 ]]; then pattern=$2; else pattern=$1; fi
+
+    # &2 does not work "well" here nigga, so let it be &1
+    # work well -> Performing further ops on obtained output on prompt
+    ls $currDir | grep $pattern >&1
+}
+
