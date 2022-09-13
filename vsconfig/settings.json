@@ -1,0 +1,66 @@
+{
+    "window.zoomLevel": 1.5,
+    "terminal.integrated.fontSize": 16,
+    "editor.fontSize": 17,
+    "editor.fontWeight": 3,
+    "editor.fontLigatures": true,
+    "editor.formatOnType": true,
+    "editor.fontFamily": "Jetbrains Mono Light",
+    "files.autoSave":"onFocusChange",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.clang_format_style": "Google",
+    "[sql]": {
+        "editor.formatOnType": true
+    },
+    "json.format.enable": true,
+    "sql-formatter.dialect": "sql",
+    "sql-formatter.linesBetweenQueries": 2,
+    "sql-formatter.uppercase": true,
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust",
+    },
+    "[latex]":{
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+        "editor.tabSize": 2,
+        "editor.wordWrap": "on"
+    },
+    "keyboard.dispatch": "keyCode",
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.navigateLeft"
+            ]
+        },
+        {
+            "before": [
+                "<space>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.navigateRight"
+            ]
+        }
+    ],
+    "editor.cursorStyle": "underline",
+    "editor.bracketPairColorization.enabled": false,
+    "explorer.autoReveal": false,
+    "workbench.activityBar.visible": false,
+    "editor.lineNumbers": "relative",
+    "update.mode": "manual",
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.wordWrap": "on",
+    "workbench.startupEditor": "none",
+    "window.menuBarVisibility": "toggle",
+    "files.maxMemoryForLargeFilesMB": 5,
+    "C_Cpp.intelliSenseCacheSize": 2599,
+    // "C_Cpp.autocomplete": "Disabled",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+}
